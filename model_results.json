@@ -1,0 +1,58 @@
+{
+    "results": {
+        "Linear Regression": {
+            "MSE": 572.4858859362811,
+            "RMSE": 23.926677285746994,
+            "R2": 0.451875137986227
+        },
+        "Decision Tree": {
+            "MSE": 750.8922958903819,
+            "RMSE": 27.402414052239667,
+            "R2": 0.28106046597290113
+        },
+        "Random Forest": {
+            "MSE": 529.4635616080878,
+            "RMSE": 23.010075219522594,
+            "R2": 0.49306673094110964
+        },
+        "SVR": {
+            "MSE": 657.7430576316635,
+            "RMSE": 25.64650185954536,
+            "R2": 0.3702459194863017
+        },
+        "Stacking": {
+            "MSE": 519.331279443684,
+            "RMSE": 22.788841116732637,
+            "R2": 0.5027678535358886
+        }
+    },
+    "best2_models": [
+        "Random Forest",
+        "Linear Regression"
+    ],
+    "n_train": 1744,
+    "n_test": 436,
+    "features": [
+        "inning",
+        "runs_first10",
+        "wickets_first10",
+        "boundaries_first10",
+        "extras_first10",
+        "dots_first10",
+        "powerplay_runs",
+        "powerplay_wickets",
+        "batters_used_10",
+        "legal_balls_10",
+        "run_rate_10",
+        "boundary_rate_10",
+        "dot_rate_10",
+        "pp_rr",
+        "venue",
+        "city",
+        "toss_winner",
+        "toss_decision",
+        "match_year",
+        "match_month",
+        "match_type"
+    ]
+}
