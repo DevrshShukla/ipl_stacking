@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Score Predictor Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header>
+            <h1>IPL Score Predictor</h1>
+            <p>Predict the 1st innings total using machine learning</p>
+        </header>
+
+        <main>
+            <div class="glass-panel input-section">
+                <form id="prediction-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="batting-team">Batting Team</label>
+                            <select id="batting-team" required>
+                                <option value="" disabled selected>Select Batting Team</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bowling-team">Bowling Team</label>
+                            <select id="bowling-team" required>
+                                <option value="" disabled selected>Select Bowling Team</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="venue">Venue</label>
+                        <select id="venue" required>
+                            <option value="" disabled selected>Select Venue</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="current-score">Current Score</label>
+                            <input type="number" id="current-score" min="0" placeholder="e.g. 105" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="overs-completed">Overs (>= 5.0)</label>
+                            <input type="number" id="overs-completed" min="5.0" max="19.5" step="0.1" placeholder="e.g. 10.2" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="wickets">Wickets</label>
+                            <input type="number" id="wickets" min="0" max="9" placeholder="e.g. 2" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="predict-btn">Predict Final Score</button>
+                </form>
+                <div id="error-message" class="error-msg"></div>
+            </div>
+
+            <div class="glass-panel results-section">
+                <h2>Prediction Result</h2>
+                <div class="score-display">
+                    <span id="predicted-score">--</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="predictionChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
